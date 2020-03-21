@@ -55,7 +55,7 @@ ROOT_URLCONF = 'attack_block_fury.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'attack_block_fury.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'des7pj7e0vhh1j', 
-        'USER': 'vjcxsbybnruaap',
-        'PASSWORD': 'b53ae461a19b2817c4354a30270cb69517671fc99c6d67d68f43c0c6e91eabfd',
-        'HOST':  'ec2-52-207-93-32.compute-1.amazonaws.com',
+        'NAME': 'd2q00klctk380n', 
+        'USER': 'pbsaympjlsbgmh',
+        'PASSWORD': '83c11b79e5b8d32376628a495f3a6fe220a276ab88bcfa26d95a124f67142b1a',
+        'HOST':  'ec2-23-22-156-110.compute-1.amazonaws.com',
         'PORT':  '5432',
 
     }
@@ -128,8 +128,6 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 import django_heroku
 django_heroku.settings(locals())
