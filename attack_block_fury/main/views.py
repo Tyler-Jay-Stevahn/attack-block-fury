@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 from twilio.twiml.messaging_response import MessagingResponse
 
 # Create your views here.
@@ -14,17 +16,8 @@ def landing_page(request):
 
     return render(request, 'landingpage.html', context)
 
+@csrf_exempt
 def sms_reply(request):
-
-    resp = MessagingResponse()
-
-    resp.message('what it do?')
-
-    response = str(resp)
-
-    context = {
-
-        "greeting": response
-        }
-    
-    return render(request, 'smsreply.html', context)
+    r = MessagingResponse()
+    r.message('Hello from your Django app!')
+    return HttpResponse(r.toxml(), content_type='text/xml')
