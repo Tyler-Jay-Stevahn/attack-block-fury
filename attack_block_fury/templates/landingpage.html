@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends 'base.html' %}
 
-<h1>My First Heading</h1>
+{% block title %}
+this is a title
+{% endblock %}
 
-<p>My first paragraph.</p>
+{% block content %}
 
-</body>
-</html>
+<h1>This is our landing page</h1>
+
+<p>Welcome to our landing page</p>
+<h3> my greeting is {{greeting}}</h3>
+
+{% endblock %}
