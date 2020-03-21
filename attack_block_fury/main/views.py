@@ -16,8 +16,8 @@ def landing_page(request):
 
     return render(request, 'landingpage.html', context)
 
-@csrf_exempt
-def sms_reply(request):
-    r = MessagingResponse()
+@twilio_view
+def sms(request):
+    r = Response()
     r.message('Hello from your Django app!')
-    return HttpResponse(r.toxml(), content_type='text/xml')
+    return r
