@@ -14,7 +14,7 @@ def landing_page(request):
 
     return render(request, 'landingpage.html', context)
 
-def sms_reply(request, methods=['GET', 'POST']):
+def sms_reply(request):
 
     resp = MessagingResponse()
 
