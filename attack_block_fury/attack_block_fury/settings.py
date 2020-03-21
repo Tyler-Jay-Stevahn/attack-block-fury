@@ -25,7 +25,7 @@ SECRET_KEY = '0rxzqwuarmjn8w2jk&o-5qd)&w_0#v_vkxk60i&=&xsn27tk!3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://attack-block-fury.herokuapp.com/']
 
 
 # Application definition
