@@ -17,6 +17,11 @@ def landing_page(request):
 
 @twilio_view
 def sms_reply(request):
+
     r = MessagingResponse()
-    r.message('Thanks for the SMS message!')
+
+    message = 'wow what to do now'
+
+    r.message(message)
+
     return r
