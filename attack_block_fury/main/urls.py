@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import landing_page, sms_reply
+from .views import landing_page, sms_send
 
 urlpatterns = [
-    path('sms/', sms_reply, name='sms_reply'),
+    path('sms/', sms_send, name='sms_send'),
     path('', landing_page, name='landing_page')
 ]
  
