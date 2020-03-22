@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_twilio',
 ]
 
 MIDDLEWARE = [
@@ -86,6 +87,8 @@ DATABASES = {
     }
 }
 
+TWILIO_ACCOUNT_SID = "AC896924fffcc3cf4e45c108b11857708e"
+TWILIO_AUTH_TOKEN = "83f446b27e37494f06f71dfbb10799e8"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

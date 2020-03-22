@@ -17,6 +17,6 @@ def landing_page(request):
 
 @twilio_view
 def sms_reply(request):
-    r = Response()
-    r.message('Hello from your Django app!')
+    r = MessagingResponse()
+    r.message('Thanks for the SMS message!')
     return r
