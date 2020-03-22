@@ -12,4 +12,4 @@ body = "yo this is your boi tyler"
 def send_it(receiver, sender, body):
     client = Client(twilio.objects.get(id=1))
     
-    message = client.messages.create(to=receiver, from=sender, body=body)
+    message = client.messages.create(to=receiver, from_=sender, body=body)
